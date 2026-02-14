@@ -16,7 +16,6 @@ $GroupNames | ForEach-Object {
                 
                 foreach ($user in $mail1)
                 {  
-                    #$out = $gr1.name + "," + $user.UserPrincipalName
                     $out = $user.UserPrincipalName + "|" + $gr1.name
                     out-file -InputObject $out -FilePath $file -append
                 }
